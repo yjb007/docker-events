@@ -4,12 +4,15 @@ docker collect "docker system events" log
 使用方法：
 
 1. 执行构建image
+
 sh build.sh
 
 2. 执行构建service
+
 sh service.sh
 
-本job的目的是搜集docker swarm 的所有节点上的 docker system events 产生的日志，当然也可以搜集单个节点的docker system events 产生的日志
+本job的目的是搜集docker swarm 的所有节点上的 docker system events 产生的日志
+当然也可以搜集单个节点的docker system events 产生的日志
 
 流程如下：
 
