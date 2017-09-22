@@ -19,5 +19,7 @@ sh service.sh
 流程如下：
 
 1.通过--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock将docker host的docker sock文件挂载到新建的docker events容器内
+
 2.docker events容器调用docker python API命令获取docker system events的日志，并输出到容器的stdout
+
 3.docker events容器配置--log-driver=fluentd选项将stdout日志经由fluentd归集到elasticsearch，kibana日志系统进行查看
